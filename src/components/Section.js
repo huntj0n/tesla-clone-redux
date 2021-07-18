@@ -13,16 +13,16 @@ function Section({ title, desc, backgroundImg, leftBtnText, rightBtnText }) {
             </Fade>
             <Buttons>
                 <Fade bottom>
-                <ButtonGroup>
-                    <LeftButton>
-                        {leftBtnText}
-                    </LeftButton>
-                    {rightBtnText && 
-                        <RightButton>
-                            {rightBtnText}
-                        </RightButton>
-                    }
-                </ButtonGroup>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+                        {rightBtnText && 
+                            <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
                 </Fade>
 
                 <DownArrow src="/images/down-arrow.svg"/>
@@ -34,6 +34,7 @@ function Section({ title, desc, backgroundImg, leftBtnText, rightBtnText }) {
 export default Section
 
 const Wrap = styled.div`
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     display: flex;
